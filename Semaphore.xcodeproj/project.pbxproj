@@ -1,0 +1,1428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0542B7921B2B0096008807D3 /* Semaphore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C885F18C8C76B006260B3 /* Semaphore.framework */; };
+		05C0A50C1B309CCE0011840D /* Semaphore.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C0A5011B309CBF0011840D /* Semaphore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05C0A50D1B309CCF0011840D /* Semaphore.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C0A5011B309CBF0011840D /* Semaphore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05C0A50F1B309CD10011840D /* Semaphore.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C0A5011B309CBF0011840D /* Semaphore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05C0A5101B309CD10011840D /* Semaphore.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C0A5011B309CBF0011840D /* Semaphore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05C0A5111B309CE60011840D /* Semaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0A5021B309CBF0011840D /* Semaphore.m */; };
+		05C0A5121B309CE70011840D /* Semaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0A5021B309CBF0011840D /* Semaphore.m */; };
+		05C0A5131B309CE70011840D /* Semaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0A5021B309CBF0011840D /* Semaphore.m */; };
+		05C0A5141B309CE80011840D /* Semaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0A5021B309CBF0011840D /* Semaphore.m */; };
+		05C0A5151B309CE90011840D /* Semaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0A5021B309CBF0011840D /* Semaphore.m */; };
+		05C0A5161B309CE90011840D /* Semaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0A5021B309CBF0011840D /* Semaphore.m */; };
+		05C0A5171B309CED0011840D /* Semaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0A5021B309CBF0011840D /* Semaphore.m */; };
+		05C0A5181B309CEE0011840D /* Semaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0A5021B309CBF0011840D /* Semaphore.m */; };
+		05C0A5191B309CF90011840D /* SemaphoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0A5061B309CBF0011840D /* SemaphoreTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0542B7901B2B0093008807D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 056C87C618C8B0F8006260B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 056C885E18C8C76B006260B3;
+			remoteInfo = "ARC - Mac Framework";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0509E33D19A3E06000D7BC48 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C88A818C8C8AC006260B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0509E34119A3E06000D7BC48 /* libSemaphore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSemaphore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0509E34C19A3E06200D7BC48 /* Semaphore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Semaphore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0509E35719A3E06400D7BC48 /* libSemaphore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSemaphore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		0509E36419A3E06700D7BC48 /* libSemaphore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSemaphore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0509E38519A4940700D7BC48 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		051F09651946EB70004B6E47 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0542B7791B2AFC85008807D3 /* travis-after.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-after.sh"; sourceTree = "<group>"; };
+		0542B77A1B2AFC85008807D3 /* travis-before.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-before.sh"; sourceTree = "<group>"; };
+		056C881218C8B85F006260B3 /* libSemaphore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSemaphore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		056C884A18C8C547006260B3 /* libSemaphore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSemaphore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		056C885F18C8C76B006260B3 /* Semaphore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Semaphore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		056C88AA18C8C8AC006260B3 /* libSemaphore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSemaphore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		05C0A4FE1B309CBF0011840D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05C0A4FF1B309CBF0011840D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		05C0A5011B309CBF0011840D /* Semaphore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Semaphore.h; sourceTree = "<group>"; };
+		05C0A5021B309CBF0011840D /* Semaphore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Semaphore.m; sourceTree = "<group>"; };
+		05C0A5041B309CBF0011840D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05C0A5051B309CBF0011840D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		05C0A5061B309CBF0011840D /* SemaphoreTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreTest.m; sourceTree = "<group>"; };
+		05E71B631961D9D100F911C4 /* Semaphore.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Semaphore.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0509E33C19A3E06000D7BC48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0509E34519A3E06200D7BC48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0509E35119A3E06400D7BC48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0509E35B19A3E06700D7BC48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C880F18C8B85F006260B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C884718C8C547006260B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C885B18C8C76B006260B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C88A718C8C8AC006260B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E71B601961D9D100F911C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0542B7921B2B0096008807D3 /* Semaphore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0542B7771B2AFC85008807D3 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				0542B7791B2AFC85008807D3 /* travis-after.sh */,
+				0542B77A1B2AFC85008807D3 /* travis-before.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		056C87C518C8B0F8006260B3 = {
+			isa = PBXGroup;
+			children = (
+				0509E38519A4940700D7BC48 /* LICENSE.txt */,
+				051F09651946EB70004B6E47 /* README.md */,
+				05C0A4FD1B309CBF0011840D /* Semaphore */,
+				05C0A5031B309CBF0011840D /* Semaphore Tests */,
+				0542B7771B2AFC85008807D3 /* Scripts */,
+				056C880D18C8B50E006260B3 /* Frameworks */,
+				056C87CF18C8B0F8006260B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		056C87CF18C8B0F8006260B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				056C881218C8B85F006260B3 /* libSemaphore.a */,
+				056C884A18C8C547006260B3 /* libSemaphore.dylib */,
+				056C885F18C8C76B006260B3 /* Semaphore.framework */,
+				056C88AA18C8C8AC006260B3 /* libSemaphore.a */,
+				05E71B631961D9D100F911C4 /* Semaphore.xctest */,
+				0509E34119A3E06000D7BC48 /* libSemaphore.a */,
+				0509E34C19A3E06200D7BC48 /* Semaphore.framework */,
+				0509E35719A3E06400D7BC48 /* libSemaphore.dylib */,
+				0509E36419A3E06700D7BC48 /* libSemaphore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		056C880D18C8B50E006260B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05C0A4FD1B309CBF0011840D /* Semaphore */ = {
+			isa = PBXGroup;
+			children = (
+				05C0A4FE1B309CBF0011840D /* Info.plist */,
+				05C0A4FF1B309CBF0011840D /* PrefixHeader.pch */,
+				05C0A5001B309CBF0011840D /* Source */,
+			);
+			path = Semaphore;
+			sourceTree = "<group>";
+		};
+		05C0A5001B309CBF0011840D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				05C0A5011B309CBF0011840D /* Semaphore.h */,
+				05C0A5021B309CBF0011840D /* Semaphore.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		05C0A5031B309CBF0011840D /* Semaphore Tests */ = {
+			isa = PBXGroup;
+			children = (
+				05C0A5041B309CBF0011840D /* Info.plist */,
+				05C0A5051B309CBF0011840D /* PrefixHeader.pch */,
+				05C0A5061B309CBF0011840D /* SemaphoreTest.m */,
+			);
+			path = "Semaphore Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0509E34619A3E06200D7BC48 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A5101B309CD10011840D /* Semaphore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0509E35219A3E06400D7BC48 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A50F1B309CD10011840D /* Semaphore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0509E35C19A3E06700D7BC48 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C881018C8B85F006260B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C884818C8C547006260B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A50C1B309CCE0011840D /* Semaphore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C885C18C8C76B006260B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A50D1B309CCF0011840D /* Semaphore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0509E33919A3E06000D7BC48 /* MRC - iOS Static Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0509E33E19A3E06000D7BC48 /* Build configuration list for PBXNativeTarget "MRC - iOS Static Library" */;
+			buildPhases = (
+				0509E33A19A3E06000D7BC48 /* Sources */,
+				0509E33C19A3E06000D7BC48 /* Frameworks */,
+				0509E33D19A3E06000D7BC48 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MRC - iOS Static Library";
+			productName = "CF++";
+			productReference = 0509E34119A3E06000D7BC48 /* libSemaphore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0509E34219A3E06200D7BC48 /* MRC - Mac Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0509E34919A3E06200D7BC48 /* Build configuration list for PBXNativeTarget "MRC - Mac Framework" */;
+			buildPhases = (
+				0509E34319A3E06200D7BC48 /* Sources */,
+				0509E34519A3E06200D7BC48 /* Frameworks */,
+				0509E34619A3E06200D7BC48 /* Headers */,
+				0509E34819A3E06200D7BC48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MRC - Mac Framework";
+			productName = "CF++";
+			productReference = 0509E34C19A3E06200D7BC48 /* Semaphore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0509E34E19A3E06400D7BC48 /* MRC - Mac Dynamic Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0509E35419A3E06400D7BC48 /* Build configuration list for PBXNativeTarget "MRC - Mac Dynamic Library" */;
+			buildPhases = (
+				0509E34F19A3E06400D7BC48 /* Sources */,
+				0509E35119A3E06400D7BC48 /* Frameworks */,
+				0509E35219A3E06400D7BC48 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MRC - Mac Dynamic Library";
+			productName = "CF++";
+			productReference = 0509E35719A3E06400D7BC48 /* libSemaphore.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		0509E35819A3E06700D7BC48 /* MRC - Mac Static Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0509E36119A3E06700D7BC48 /* Build configuration list for PBXNativeTarget "MRC - Mac Static Library" */;
+			buildPhases = (
+				0509E35919A3E06700D7BC48 /* Sources */,
+				0509E35B19A3E06700D7BC48 /* Frameworks */,
+				0509E35C19A3E06700D7BC48 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MRC - Mac Static Library";
+			productName = "CF++";
+			productReference = 0509E36419A3E06700D7BC48 /* libSemaphore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		056C881118C8B85F006260B3 /* ARC - Mac Static Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 056C881318C8B85F006260B3 /* Build configuration list for PBXNativeTarget "ARC - Mac Static Library" */;
+			buildPhases = (
+				056C880E18C8B85F006260B3 /* Sources */,
+				056C880F18C8B85F006260B3 /* Frameworks */,
+				056C881018C8B85F006260B3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ARC - Mac Static Library";
+			productName = "CF++";
+			productReference = 056C881218C8B85F006260B3 /* libSemaphore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		056C884918C8C547006260B3 /* ARC - Mac Dynamic Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 056C884B18C8C547006260B3 /* Build configuration list for PBXNativeTarget "ARC - Mac Dynamic Library" */;
+			buildPhases = (
+				056C884618C8C547006260B3 /* Sources */,
+				056C884718C8C547006260B3 /* Frameworks */,
+				056C884818C8C547006260B3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ARC - Mac Dynamic Library";
+			productName = "CF++";
+			productReference = 056C884A18C8C547006260B3 /* libSemaphore.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		056C885E18C8C76B006260B3 /* ARC - Mac Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 056C888318C8C76C006260B3 /* Build configuration list for PBXNativeTarget "ARC - Mac Framework" */;
+			buildPhases = (
+				056C885A18C8C76B006260B3 /* Sources */,
+				056C885B18C8C76B006260B3 /* Frameworks */,
+				056C885C18C8C76B006260B3 /* Headers */,
+				056C885D18C8C76B006260B3 /* Resources */,
+				0542B7931B2B009F008807D3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ARC - Mac Framework";
+			productName = "CF++";
+			productReference = 056C885F18C8C76B006260B3 /* Semaphore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		056C88A918C8C8AC006260B3 /* ARC - iOS Static Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 056C88C918C8C8AD006260B3 /* Build configuration list for PBXNativeTarget "ARC - iOS Static Library" */;
+			buildPhases = (
+				056C88A618C8C8AC006260B3 /* Sources */,
+				056C88A718C8C8AC006260B3 /* Frameworks */,
+				056C88A818C8C8AC006260B3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ARC - iOS Static Library";
+			productName = "CF++";
+			productReference = 056C88AA18C8C8AC006260B3 /* libSemaphore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		05E71B621961D9D100F911C4 /* Semaphore Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05E71B6C1961D9D100F911C4 /* Build configuration list for PBXNativeTarget "Semaphore Tests" */;
+			buildPhases = (
+				05E71B5F1961D9D100F911C4 /* Sources */,
+				05E71B601961D9D100F911C4 /* Frameworks */,
+				05E71B611961D9D100F911C4 /* Resources */,
+				0542B78B1B2AFECE008807D3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0542B7911B2B0093008807D3 /* PBXTargetDependency */,
+			);
+			name = "Semaphore Tests";
+			productName = "CF++ Tests";
+			productReference = 05E71B631961D9D100F911C4 /* Semaphore.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		056C87C618C8B0F8006260B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "XS-Labs";
+				TargetAttributes = {
+					05E71B621961D9D100F911C4 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 056C881118C8B85F006260B3;
+					};
+				};
+			};
+			buildConfigurationList = 056C87C918C8B0F8006260B3 /* Build configuration list for PBXProject "Semaphore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 056C87C518C8B0F8006260B3;
+			productRefGroup = 056C87CF18C8B0F8006260B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				056C881118C8B85F006260B3 /* ARC - Mac Static Library */,
+				056C884918C8C547006260B3 /* ARC - Mac Dynamic Library */,
+				056C885E18C8C76B006260B3 /* ARC - Mac Framework */,
+				056C88A918C8C8AC006260B3 /* ARC - iOS Static Library */,
+				0509E35819A3E06700D7BC48 /* MRC - Mac Static Library */,
+				0509E34E19A3E06400D7BC48 /* MRC - Mac Dynamic Library */,
+				0509E34219A3E06200D7BC48 /* MRC - Mac Framework */,
+				0509E33919A3E06000D7BC48 /* MRC - iOS Static Library */,
+				05E71B621961D9D100F911C4 /* Semaphore Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0509E34819A3E06200D7BC48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C885D18C8C76B006260B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E71B611961D9D100F911C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0542B78B1B2AFECE008807D3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export | egrep '(BUILT_PRODUCTS_DIR)|(CURRENT_ARCH)|(OBJECT_FILE_DIR_normal)|(SRCROOT)|(OBJROOT)' > Scripts/xcenv-tests.sh\n";
+		};
+		0542B7931B2B009F008807D3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export | egrep '(BUILT_PRODUCTS_DIR)|(CURRENT_ARCH)|(OBJECT_FILE_DIR_normal)|(SRCROOT)|(OBJROOT)' > Scripts/xcenv-lib.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0509E33A19A3E06000D7BC48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A5181B309CEE0011840D /* Semaphore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0509E34319A3E06200D7BC48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A5171B309CED0011840D /* Semaphore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0509E34F19A3E06400D7BC48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A5161B309CE90011840D /* Semaphore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0509E35919A3E06700D7BC48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A5151B309CE90011840D /* Semaphore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C880E18C8B85F006260B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A5111B309CE60011840D /* Semaphore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C884618C8C547006260B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A5121B309CE70011840D /* Semaphore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C885A18C8C76B006260B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A5131B309CE70011840D /* Semaphore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		056C88A618C8C8AC006260B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A5141B309CE80011840D /* Semaphore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E71B5F1961D9D100F911C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0A5191B309CF90011840D /* SemaphoreTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0542B7911B2B0093008807D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 056C885E18C8C76B006260B3 /* ARC - Mac Framework */;
+			targetProxy = 0542B7901B2B0093008807D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0509E33F19A3E06000D7BC48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Semaphore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		0509E34019A3E06000D7BC48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Semaphore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+		0509E34A19A3E06200D7BC48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				INFOPLIST_FILE = Semaphore/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.Semaphore";
+				PRODUCT_NAME = Semaphore;
+				VALID_ARCHS = "i386 x86_64";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		0509E34B19A3E06200D7BC48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				INFOPLIST_FILE = Semaphore/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.Semaphore";
+				PRODUCT_NAME = Semaphore;
+				VALID_ARCHS = "i386 x86_64";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		0509E35519A3E06400D7BC48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = Semaphore;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		0509E35619A3E06400D7BC48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = Semaphore;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+		0509E36219A3E06700D7BC48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = Semaphore;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		0509E36319A3E06700D7BC48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = Semaphore;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+		0542B77B1B2AFD1D008807D3 /* GCov */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
+				CLANG_ANALYZER_GCD = YES;
+				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CLANG_ANALYZER_OBJC_ATSYNC = YES;
+				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
+				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
+				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
+				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
+				CLANG_ANALYZER_OBJC_SELF_INIT = YES;
+				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_GETPW_GETS = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_MKSTEMP = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK = YES;
+				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = GCov;
+		};
+		0542B77C1B2AFD1D008807D3 /* GCov */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				PRODUCT_NAME = Semaphore;
+				SKIP_INSTALL = YES;
+			};
+			name = GCov;
+		};
+		0542B77D1B2AFD1D008807D3 /* GCov */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				PRODUCT_NAME = Semaphore;
+			};
+			name = GCov;
+		};
+		0542B77E1B2AFD1D008807D3 /* GCov */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				INFOPLIST_FILE = Semaphore/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.Semaphore";
+				PRODUCT_NAME = Semaphore;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = GCov;
+		};
+		0542B77F1B2AFD1D008807D3 /* GCov */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Semaphore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = GCov;
+		};
+		0542B7801B2AFD1D008807D3 /* GCov */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = Semaphore;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = GCov;
+		};
+		0542B7811B2AFD1D008807D3 /* GCov */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = Semaphore;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = GCov;
+		};
+		0542B7821B2AFD1D008807D3 /* GCov */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				INFOPLIST_FILE = Semaphore/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.Semaphore";
+				PRODUCT_NAME = Semaphore;
+				VALID_ARCHS = "i386 x86_64";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = GCov;
+		};
+		0542B7831B2AFD1D008807D3 /* GCov */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Semaphore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = GCov;
+		};
+		0542B7841B2AFD1D008807D3 /* GCov */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Semaphore Tests/PrefixHeader.pch";
+				GCC_WARN_PEDANTIC = NO;
+				INFOPLIST_FILE = "Semaphore Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Semaphore;
+			};
+			name = GCov;
+		};
+		056C87D518C8B0F8006260B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
+				CLANG_ANALYZER_GCD = YES;
+				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CLANG_ANALYZER_OBJC_ATSYNC = YES;
+				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
+				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
+				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
+				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
+				CLANG_ANALYZER_OBJC_SELF_INIT = YES;
+				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_GETPW_GETS = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_MKSTEMP = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK = YES;
+				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		056C87D618C8B0F8006260B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
+				CLANG_ANALYZER_GCD = YES;
+				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CLANG_ANALYZER_OBJC_ATSYNC = YES;
+				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
+				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
+				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
+				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
+				CLANG_ANALYZER_OBJC_SELF_INIT = YES;
+				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_GETPW_GETS = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_MKSTEMP = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK = YES;
+				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		056C881418C8B85F006260B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				PRODUCT_NAME = Semaphore;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		056C881518C8B85F006260B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				PRODUCT_NAME = Semaphore;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		056C884C18C8C547006260B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				PRODUCT_NAME = Semaphore;
+			};
+			name = Debug;
+		};
+		056C884D18C8C547006260B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				PRODUCT_NAME = Semaphore;
+			};
+			name = Release;
+		};
+		056C888418C8C76C006260B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				INFOPLIST_FILE = Semaphore/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.Semaphore";
+				PRODUCT_NAME = Semaphore;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		056C888518C8C76C006260B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				INFOPLIST_FILE = Semaphore/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.Semaphore";
+				PRODUCT_NAME = Semaphore;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		056C88CA18C8C8AD006260B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Semaphore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		056C88CB18C8C8AD006260B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Semaphore/PrefixHeader.pch;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Semaphore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+		05E71B6D1961D9D100F911C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Semaphore Tests/PrefixHeader.pch";
+				GCC_WARN_PEDANTIC = NO;
+				INFOPLIST_FILE = "Semaphore Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Semaphore;
+			};
+			name = Debug;
+		};
+		05E71B6E1961D9D100F911C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Semaphore Tests/PrefixHeader.pch";
+				GCC_WARN_PEDANTIC = NO;
+				INFOPLIST_FILE = "Semaphore Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Semaphore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0509E33E19A3E06000D7BC48 /* Build configuration list for PBXNativeTarget "MRC - iOS Static Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0509E33F19A3E06000D7BC48 /* Debug */,
+				0542B7831B2AFD1D008807D3 /* GCov */,
+				0509E34019A3E06000D7BC48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0509E34919A3E06200D7BC48 /* Build configuration list for PBXNativeTarget "MRC - Mac Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0509E34A19A3E06200D7BC48 /* Debug */,
+				0542B7821B2AFD1D008807D3 /* GCov */,
+				0509E34B19A3E06200D7BC48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0509E35419A3E06400D7BC48 /* Build configuration list for PBXNativeTarget "MRC - Mac Dynamic Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0509E35519A3E06400D7BC48 /* Debug */,
+				0542B7811B2AFD1D008807D3 /* GCov */,
+				0509E35619A3E06400D7BC48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0509E36119A3E06700D7BC48 /* Build configuration list for PBXNativeTarget "MRC - Mac Static Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0509E36219A3E06700D7BC48 /* Debug */,
+				0542B7801B2AFD1D008807D3 /* GCov */,
+				0509E36319A3E06700D7BC48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		056C87C918C8B0F8006260B3 /* Build configuration list for PBXProject "Semaphore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				056C87D518C8B0F8006260B3 /* Debug */,
+				0542B77B1B2AFD1D008807D3 /* GCov */,
+				056C87D618C8B0F8006260B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		056C881318C8B85F006260B3 /* Build configuration list for PBXNativeTarget "ARC - Mac Static Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				056C881418C8B85F006260B3 /* Debug */,
+				0542B77C1B2AFD1D008807D3 /* GCov */,
+				056C881518C8B85F006260B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		056C884B18C8C547006260B3 /* Build configuration list for PBXNativeTarget "ARC - Mac Dynamic Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				056C884C18C8C547006260B3 /* Debug */,
+				0542B77D1B2AFD1D008807D3 /* GCov */,
+				056C884D18C8C547006260B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		056C888318C8C76C006260B3 /* Build configuration list for PBXNativeTarget "ARC - Mac Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				056C888418C8C76C006260B3 /* Debug */,
+				0542B77E1B2AFD1D008807D3 /* GCov */,
+				056C888518C8C76C006260B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		056C88C918C8C8AD006260B3 /* Build configuration list for PBXNativeTarget "ARC - iOS Static Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				056C88CA18C8C8AD006260B3 /* Debug */,
+				0542B77F1B2AFD1D008807D3 /* GCov */,
+				056C88CB18C8C8AD006260B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05E71B6C1961D9D100F911C4 /* Build configuration list for PBXNativeTarget "Semaphore Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05E71B6D1961D9D100F911C4 /* Debug */,
+				0542B7841B2AFD1D008807D3 /* GCov */,
+				05E71B6E1961D9D100F911C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 056C87C618C8B0F8006260B3 /* Project object */;
+}

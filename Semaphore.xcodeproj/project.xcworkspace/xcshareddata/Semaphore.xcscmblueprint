@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B9D1B4A3FDA1AFAD9F3F1AAE6AC14DC550B06BAA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B9D1B4A3FDA1AFAD9F3F1AAE6AC14DC550B06BAA" : 0,
+    "AD39BA3E2B4B02579A8A8FCD14573D6431BFEA2A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "49FC561D-0DB8-4DE4-98D5-6557A8A8AD15",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B9D1B4A3FDA1AFAD9F3F1AAE6AC14DC550B06BAA" : "objc-semaphore\/",
+    "AD39BA3E2B4B02579A8A8FCD14573D6431BFEA2A" : "objc-uti\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Semaphore",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Semaphore.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:macmade\/objc-uti.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AD39BA3E2B4B02579A8A8FCD14573D6431BFEA2A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:macmade\/objc-semaphore.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B9D1B4A3FDA1AFAD9F3F1AAE6AC14DC550B06BAA"
+    }
+  ]
+}
