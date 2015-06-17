@@ -36,6 +36,13 @@
 
 @interface Semaphore: NSObject
 
+@property( atomic, readonly ) NSUInteger count;
+@property( atomic, readonly ) BOOL       isNamed;
+@property( atomic, readonly ) NSString * name;
 
++ ( instancetype )semaphoreWithCount: ( NSUInteger )c;
++ ( instancetype )semaphoreWithName: ( NSString * )n count: ( NSUInteger )c;
+- ( instancetype )initWithCount: ( NSUInteger )c;
+- ( instancetype )initWithName: ( NSString * )n count: ( NSUInteger )c NS_DESIGNATED_INITIALIZER;
 
 @end

@@ -42,12 +42,74 @@
 
 @interface Semaphore()
 
-
+@property( atomic, readwrite, assign ) NSUInteger count;
+@property( atomic, readwrite, assign ) BOOL       isNamed;
+@property( atomic, readwrite, strong ) NSString * name;
 
 @end
 
 @implementation Semaphore
 
+@synthesize count;
+@synthesize isNamed;
+@synthesize name;
 
++ ( instancetype )semaphoreWithCount: ( NSUInteger )c
+{
+    #if SEMAPHORE_ARC
+    return [ [ self alloc ] initWithCount: c ];
+    #else
+    return [ [ [ self alloc ] initWithCount: c ] autorelease ];
+    #endif
+}
+
++ ( instancetype )semaphoreWithName: ( NSString * )n count: ( NSUInteger )c
+{
+    #if SEMAPHORE_ARC
+    return [ [ self alloc ] initWithName: n count: c ];
+    #else
+    return [ [ [ self alloc ] initWithName: n count: c ] autorelease ];
+    #endif
+}
+
+- ( instancetype )initWithCount: ( NSUInteger )c
+{
+    return [ self initWithName: nil count: c ];
+}
+
+- ( instancetype )initWithName: ( NSString * )n count: ( NSUInteger )c
+{
+    if( c == 0 )
+    {
+        #if SEMAPHORE_ARC == 0
+        [ self release ];
+        #endif
+        
+        return nil;
+    }
+    
+    if( ( self = [ super init ] ) )
+    {
+        self.count   = c;
+        self.isNamed = n != nil;
+        self.name    = n;
+        
+        if( n == nil )
+        {
+            
+        }
+        else
+        {
+            
+        }
+    }
+    
+    return self;
+}
+
+- ( instancetype )init
+{
+    return [ self initWithCount: 1 ];
+}
 
 @end
