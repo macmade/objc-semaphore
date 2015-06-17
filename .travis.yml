@@ -1,0 +1,8 @@
+language: objective-c
+compiler: clang
+xcode_project: Semaphore.xcodeproj
+xcode_scheme: ARC - Mac Framework
+before_install:
+  - bash Scripts/travis-before.sh
+after_success:
+  - bash Scripts/travis-after.sh

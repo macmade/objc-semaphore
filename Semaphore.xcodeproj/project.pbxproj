@@ -61,8 +61,6 @@
 		0509E36419A3E06700D7BC48 /* libSemaphore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSemaphore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0509E38519A4940700D7BC48 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		051F09651946EB70004B6E47 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		0542B7791B2AFC85008807D3 /* travis-after.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-after.sh"; sourceTree = "<group>"; };
-		0542B77A1B2AFC85008807D3 /* travis-before.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-before.sh"; sourceTree = "<group>"; };
 		056C881218C8B85F006260B3 /* libSemaphore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSemaphore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C884A18C8C547006260B3 /* libSemaphore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSemaphore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C885F18C8C76B006260B3 /* Semaphore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Semaphore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +72,8 @@
 		05C0A5041B309CBF0011840D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05C0A5051B309CBF0011840D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		05C0A5061B309CBF0011840D /* SemaphoreTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreTest.m; sourceTree = "<group>"; };
+		05C0A51C1B3163860011840D /* travis-after.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "travis-after.sh"; sourceTree = "<group>"; };
+		05C0A51D1B3163860011840D /* travis-before.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "travis-before.sh"; sourceTree = "<group>"; };
 		05E71B631961D9D100F911C4 /* Semaphore.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Semaphore.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -145,15 +145,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0542B7771B2AFC85008807D3 /* Scripts */ = {
-			isa = PBXGroup;
-			children = (
-				0542B7791B2AFC85008807D3 /* travis-after.sh */,
-				0542B77A1B2AFC85008807D3 /* travis-before.sh */,
-			);
-			path = Scripts;
-			sourceTree = "<group>";
-		};
 		056C87C518C8B0F8006260B3 = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +152,7 @@
 				051F09651946EB70004B6E47 /* README.md */,
 				05C0A4FD1B309CBF0011840D /* Semaphore */,
 				05C0A5031B309CBF0011840D /* Semaphore Tests */,
-				0542B7771B2AFC85008807D3 /* Scripts */,
+				05C0A51A1B3163860011840D /* Scripts */,
 				056C880D18C8B50E006260B3 /* Frameworks */,
 				056C87CF18C8B0F8006260B3 /* Products */,
 			);
@@ -217,6 +208,15 @@
 				05C0A5061B309CBF0011840D /* SemaphoreTest.m */,
 			);
 			path = "Semaphore Tests";
+			sourceTree = "<group>";
+		};
+		05C0A51A1B3163860011840D /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				05C0A51C1B3163860011840D /* travis-after.sh */,
+				05C0A51D1B3163860011840D /* travis-before.sh */,
+			);
+			path = Scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
