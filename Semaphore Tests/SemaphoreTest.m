@@ -47,4 +47,116 @@
     [ super tearDown ];
 }
 
+- ( void )testNew
+{
+    Semaphore * s;
+    
+    s = [ Semaphore new ];
+    
+    XCTAssertNotNil( s );
+}
+
+- ( void )testSemaphoreWithCount
+{
+    Semaphore * s;
+    
+    s = [ Semaphore semaphoreWithCount: 1 ];
+    
+    XCTAssertNotNil( s );
+    
+    s = [ Semaphore semaphoreWithCount: 0 ];
+    
+    XCTAssertNil( s );
+}
+
+- ( void )testInitWithCount
+{
+    Semaphore * s;
+    
+    s = [ [ Semaphore alloc ] initWithCount: 1 ];
+    
+    XCTAssertNotNil( s );
+    
+    s = [ [ Semaphore alloc ] initWithCount: 0 ];
+    
+    XCTAssertNil( s );
+}
+
+- ( void )testSemaphoreWithName_Count
+{
+    Semaphore * s;
+    
+    s = [ Semaphore semaphoreWithName: @"com.xs-labs.semaphore.test" count: 1 ];
+    
+    XCTAssertNotNil( s );
+    
+    s = [ Semaphore semaphoreWithName: @"com.xs-labs.semaphore.test" count: 0 ];
+    
+    XCTAssertNil( s );
+    
+    s = [ Semaphore semaphoreWithName: nil count: 1 ];
+    
+    XCTAssertNotNil( s );
+    
+    s = [ Semaphore semaphoreWithName: nil count: 0 ];
+    
+    XCTAssertNil( s );
+}
+
+- ( void )testInitWithName_Count
+{
+    Semaphore * s;
+    
+    s = [ [ Semaphore alloc ] initWithName: @"com.xs-labs.semaphore.test" count: 1 ];
+    
+    XCTAssertNotNil( s );
+    
+    s = [ [ Semaphore alloc ] initWithName: @"com.xs-labs.semaphore.test" count: 0 ];
+    
+    XCTAssertNil( s );
+    
+    s = [ [ Semaphore alloc ] initWithName: nil count: 1 ];
+    
+    XCTAssertNotNil( s );
+    
+    s = [ [ Semaphore alloc ] initWithName: nil count: 0 ];
+    
+    XCTAssertNil( s );
+}
+
+- ( void )testIsNamed
+{
+    Semaphore * s;
+    
+    s = [ Semaphore semaphoreWithName: @"com.xs-labs.semaphore.test" count: 1 ];
+    
+    XCTAssertTrue( s.isNamed );
+    
+    s = [ Semaphore semaphoreWithCount: 1 ];
+    
+    XCTAssertFalse( s.isNamed );
+}
+
+- ( void )testName
+{
+    Semaphore * s;
+    
+    s = [ Semaphore semaphoreWithName: @"com.xs-labs.semaphore.test" count: 1 ];
+    
+    XCTAssertEqualObjects( s.name, @"com.xs-labs.semaphore.test" );
+    
+    s = [ Semaphore semaphoreWithCount: 1 ];
+    
+    XCTAssertNil( s.name );
+}
+
+- ( void )testCount
+{
+    Semaphore * s;
+    
+    s = [ Semaphore semaphoreWithCount: 1 ];
+    
+    XCTAssertEqual( s.count, ( NSUInteger )1 );
+}
+
 @end
