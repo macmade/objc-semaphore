@@ -44,5 +44,7 @@
 + ( instancetype )semaphoreWithName: ( NSString * )n count: ( NSUInteger )c;
 - ( instancetype )initWithCount: ( NSUInteger )c;
 - ( instancetype )initWithName: ( NSString * )n count: ( NSUInteger )c NS_DESIGNATED_INITIALIZER;
+- ( BOOL )tryWait;
+- ( void )signal;
 
 @end

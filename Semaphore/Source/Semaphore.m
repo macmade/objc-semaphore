@@ -24,6 +24,12 @@
 
 #import "Semaphore.h"
 
+@import Darwin.sys.semaphore;
+@import Darwin.POSIX.fcntl;
+@import Darwin.Mach.mach_init;
+@import Darwin.Mach.task;
+@import Darwin.Mach.semaphore;
+
 #ifndef __has_feature
 #define __has_feature( _x_ )    0
 #endif
@@ -41,6 +47,9 @@
 #endif
 
 @interface Semaphore()
+{
+    semaphore_t _semaphore;
+}
 
 @property( atomic, readwrite, assign ) NSUInteger count;
 @property( atomic, readwrite, assign ) BOOL       isNamed;
@@ -91,16 +100,23 @@
     if( ( self = [ super init ] ) )
     {
         self.count   = c;
-        self.isNamed = n != nil;
+        self.isNamed = ( n == nil ) ? NO : YES;
         self.name    = n;
         
-        if( n == nil )
+        if( self.isNamed )
         {
             
         }
         else
         {
-            
+            if( semaphore_create( mach_task_self(), &_semaphore, SYNC_POLICY_FIFO, ( int )c ) != KERN_SUCCESS )
+            {
+                #if SEMAPHORE_ARC == 0
+                [ self release ];
+                #endif
+                
+                return nil;
+            }
         }
     }
     
@@ -111,5 +127,45 @@
 {
     return [ self initWithCount: 1 ];
 }
+
+- ( void )dealloc
+{
+    if( self.isNamed )
+    {
+        
+    }
+    else
+    {
+        semaphore_destroy( mach_task_self(), _semaphore );
+    }
+    
+    self.name = nil;
+    
+    #if SEMAPHORE_ARC == 0
+    [ super dealloc ];
+    #endif
+}
+
+- ( BOOL )tryWait
+{
+    if( self.isNamed )
+    {
+        return NO;
+    }
+    else
+    {
+        {
+            mach_timespec_t ts;
+            
+            ts.tv_sec  = 0;
+            ts.tv_nsec = 0;
+            
+            return ( semaphore_timedwait( _semaphore, ts ) == KERN_SUCCESS ) ? YES : NO;
+        }
+    }
+}
+
+- ( void )signal
+{}
 
 @end

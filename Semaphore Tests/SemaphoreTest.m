@@ -159,4 +159,30 @@
     XCTAssertEqual( s.count, ( NSUInteger )1 );
 }
 
+- ( void )testUnnamedBinaryTryWait
+{
+    Semaphore * s;
+    
+    s = [ Semaphore semaphoreWithCount: 1 ];
+    
+    XCTAssertTrue(  [ s tryWait ] );
+    XCTAssertFalse( [ s tryWait ] );
+    
+    [ s signal ];
+}
+
+- ( void )testUnnamedTryWait
+{
+    Semaphore * s;
+    
+    s = [ Semaphore semaphoreWithCount: 2 ];
+    
+    XCTAssertTrue(  [ s tryWait ] );
+    XCTAssertTrue(  [ s tryWait ] );
+    XCTAssertFalse( [ s tryWait ] );
+    
+    [ s signal ];
+    [ s signal ];
+}
+
 @end
