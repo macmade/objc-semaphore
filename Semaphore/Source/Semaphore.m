@@ -143,7 +143,7 @@
         self.name    = n;
         _semp        = sem_open( n.UTF8String, O_CREAT, S_IRUSR | S_IWUSR, ( int )c );
         
-        if( _semp == NULL )
+        if( _semp == NULL || _semp == SEM_FAILED )
         {
             #if SEMAPHORE_ARC == 0
             [ self release ];
