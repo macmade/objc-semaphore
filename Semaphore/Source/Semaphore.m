@@ -49,6 +49,7 @@
 @interface Semaphore()
 {
     semaphore_t _semaphore;
+    sem_t     * _semp;
 }
 
 @property( atomic, readwrite, assign ) NSUInteger count;
@@ -72,6 +73,15 @@
     #endif
 }
 
++ ( instancetype )semaphoreWithName: ( NSString * )n
+{
+    #if SEMAPHORE_ARC
+    return [ [ self alloc ] initWithName: n ];
+    #else
+    return [ [ [ self alloc ] initWithName: n ] autorelease ];
+    #endif
+}
+
 + ( instancetype )semaphoreWithName: ( NSString * )n count: ( NSUInteger )c
 {
     #if SEMAPHORE_ARC
@@ -82,11 +92,6 @@
 }
 
 - ( instancetype )initWithCount: ( NSUInteger )c
-{
-    return [ self initWithName: nil count: c ];
-}
-
-- ( instancetype )initWithName: ( NSString * )n count: ( NSUInteger )c
 {
     if( c == 0 )
     {
@@ -100,23 +105,51 @@
     if( ( self = [ super init ] ) )
     {
         self.count   = c;
-        self.isNamed = ( n == nil ) ? NO : YES;
-        self.name    = n;
+        self.isNamed = NO;
         
-        if( self.isNamed )
+        if( semaphore_create( mach_task_self(), &_semaphore, SYNC_POLICY_FIFO, ( int )c ) != KERN_SUCCESS )
         {
+            #if SEMAPHORE_ARC == 0
+            [ self release ];
+            #endif
             
+            return nil;
         }
-        else
+    }
+    
+    return self;
+}
+
+- ( instancetype )initWithName: ( NSString * )n
+{
+    return [ self initWithName: n count: 0 ];
+}
+
+- ( instancetype )initWithName: ( NSString * )n count: ( NSUInteger )c
+{
+    if( ( self = [ super init ] ) )
+    {
+        if( n == nil )
         {
-            if( semaphore_create( mach_task_self(), &_semaphore, SYNC_POLICY_FIFO, ( int )c ) != KERN_SUCCESS )
-            {
-                #if SEMAPHORE_ARC == 0
-                [ self release ];
-                #endif
-                
-                return nil;
-            }
+            #if SEMAPHORE_ARC == 0
+            [ self release ];
+            #endif
+            
+            return nil;
+        }
+        
+        self.count   = c;
+        self.isNamed = YES;
+        self.name    = n;
+        _semp        = sem_open( n.UTF8String, O_CREAT, S_IRUSR | S_IWUSR, ( int )c );
+        
+        if( _semp == NULL )
+        {
+            #if SEMAPHORE_ARC == 0
+            [ self release ];
+            #endif
+            
+            return nil;
         }
     }
     
@@ -132,7 +165,7 @@
 {
     if( self.isNamed )
     {
-        
+        sem_close( _semp );
     }
     else
     {
@@ -150,7 +183,7 @@
 {
     if( self.isNamed )
     {
-        return NO;
+        return ( sem_trywait( _semp ) == 0 ) ? YES : NO;
     }
     else
     {
@@ -166,6 +199,15 @@
 }
 
 - ( void )signal
-{}
+{
+    if( self.isNamed )
+    {
+        sem_post( _semp );
+    }
+    else
+    {
+        semaphore_signal( _semaphore );
+    }
+}
 
 @end

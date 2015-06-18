@@ -41,9 +41,13 @@
 @property( atomic, readonly ) NSString * name;
 
 + ( instancetype )semaphoreWithCount: ( NSUInteger )c;
++ ( instancetype )semaphoreWithName: ( NSString * )n;
 + ( instancetype )semaphoreWithName: ( NSString * )n count: ( NSUInteger )c;
-- ( instancetype )initWithCount: ( NSUInteger )c;
+
+- ( instancetype )initWithCount: ( NSUInteger )c NS_DESIGNATED_INITIALIZER;
+- ( instancetype )initWithName: ( NSString * )n;
 - ( instancetype )initWithName: ( NSString * )n count: ( NSUInteger )c NS_DESIGNATED_INITIALIZER;
+
 - ( BOOL )tryWait;
 - ( void )signal;
 

@@ -82,21 +82,47 @@
     XCTAssertNil( s );
 }
 
+- ( void )testSemaphoreWithName
+{
+    Semaphore * s;
+    
+    s = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore" ];
+    
+    XCTAssertNotNil( s );
+    
+    s = [ Semaphore semaphoreWithName: nil ];
+    
+    XCTAssertNil( s );
+}
+
+- ( void )testInitWithName
+{
+    Semaphore * s;
+    
+    s = [ [ Semaphore alloc ] initWithName: @"org.xs-labs.semaphore" ];
+    
+    XCTAssertNotNil( s );
+    
+    s = [ [ Semaphore alloc ] initWithName: nil ];
+    
+    XCTAssertNil( s );
+}
+
 - ( void )testSemaphoreWithName_Count
 {
     Semaphore * s;
     
-    s = [ Semaphore semaphoreWithName: @"com.xs-labs.semaphore.test" count: 1 ];
+    s = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore.1" count: 1 ];
     
     XCTAssertNotNil( s );
     
-    s = [ Semaphore semaphoreWithName: @"com.xs-labs.semaphore.test" count: 0 ];
+    s = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore" count: 0 ];
     
-    XCTAssertNil( s );
+    XCTAssertNotNil( s );
     
     s = [ Semaphore semaphoreWithName: nil count: 1 ];
     
-    XCTAssertNotNil( s );
+    XCTAssertNil( s );
     
     s = [ Semaphore semaphoreWithName: nil count: 0 ];
     
@@ -107,17 +133,17 @@
 {
     Semaphore * s;
     
-    s = [ [ Semaphore alloc ] initWithName: @"com.xs-labs.semaphore.test" count: 1 ];
+    s = [ [ Semaphore alloc ] initWithName: @"org.xs-labs.semaphore.1" count: 1 ];
     
     XCTAssertNotNil( s );
     
-    s = [ [ Semaphore alloc ] initWithName: @"com.xs-labs.semaphore.test" count: 0 ];
+    s = [ [ Semaphore alloc ] initWithName: @"org.xs-labs.semaphore" count: 0 ];
     
-    XCTAssertNil( s );
+    XCTAssertNotNil( s );
     
     s = [ [ Semaphore alloc ] initWithName: nil count: 1 ];
     
-    XCTAssertNotNil( s );
+    XCTAssertNil( s );
     
     s = [ [ Semaphore alloc ] initWithName: nil count: 0 ];
     
@@ -128,7 +154,7 @@
 {
     Semaphore * s;
     
-    s = [ Semaphore semaphoreWithName: @"com.xs-labs.semaphore.test" count: 1 ];
+    s = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore.1" count: 1 ];
     
     XCTAssertTrue( s.isNamed );
     
@@ -141,9 +167,9 @@
 {
     Semaphore * s;
     
-    s = [ Semaphore semaphoreWithName: @"com.xs-labs.semaphore.test" count: 1 ];
+    s = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore.1" count: 1 ];
     
-    XCTAssertEqualObjects( s.name, @"com.xs-labs.semaphore.test" );
+    XCTAssertEqualObjects( s.name, @"org.xs-labs.semaphore.1" );
     
     s = [ Semaphore semaphoreWithCount: 1 ];
     
@@ -183,6 +209,44 @@
     
     [ s signal ];
     [ s signal ];
+}
+
+- ( void )testNamedBinaryTryWait
+{
+    Semaphore * s1;
+    Semaphore * s2;
+    
+    s1 = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore.1" count: 1 ];
+    s2 = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore.1" count: 1 ];
+    
+    XCTAssertTrue(  [ s1 tryWait ] );
+    XCTAssertFalse( [ s1 tryWait ] );
+    XCTAssertFalse( [ s2 tryWait ] );
+    
+    [ s1 signal ];
+    
+    XCTAssertTrue(  [ s2 tryWait ] );
+    XCTAssertFalse( [ s2 tryWait ] );
+    XCTAssertFalse( [ s1 tryWait ] );
+    
+    [ s2 signal ];
+}
+
+- ( void )testNamedTryWait
+{
+    Semaphore * s1;
+    Semaphore * s2;
+    
+    s1 = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore.2" count: 2 ];
+    s2 = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore.2" count: 2 ];
+    
+    XCTAssertTrue(  [ s1 tryWait ] );
+    XCTAssertTrue(  [ s2 tryWait ] );
+    XCTAssertFalse( [ s1 tryWait ] );
+    XCTAssertFalse( [ s2 tryWait ] );
+    
+    [ s1 signal ];
+    [ s2 signal ];
 }
 
 @end
