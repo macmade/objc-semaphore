@@ -179,6 +179,30 @@
     #endif
 }
 
+- ( void )wait
+{
+    if( self.isNamed )
+    {
+        sem_wait( _semp );
+    }
+    else
+    {
+        semaphore_wait( _semaphore );
+    }
+}
+
+- ( void )signal
+{
+    if( self.isNamed )
+    {
+        sem_post( _semp );
+    }
+    else
+    {
+        semaphore_signal( _semaphore );
+    }
+}
+
 - ( BOOL )tryWait
 {
     if( self.isNamed )
@@ -195,18 +219,6 @@
             
             return ( semaphore_timedwait( _semaphore, ts ) == KERN_SUCCESS ) ? YES : NO;
         }
-    }
-}
-
-- ( void )signal
-{
-    if( self.isNamed )
-    {
-        sem_post( _semp );
-    }
-    else
-    {
-        semaphore_signal( _semaphore );
     }
 }
 

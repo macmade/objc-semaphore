@@ -48,7 +48,8 @@
 - ( instancetype )initWithName: ( NSString * )n;
 - ( instancetype )initWithName: ( NSString * )n count: ( NSUInteger )c NS_DESIGNATED_INITIALIZER;
 
-- ( BOOL )tryWait;
+- ( void )wait;
 - ( void )signal;
+- ( BOOL )tryWait;
 
 @end

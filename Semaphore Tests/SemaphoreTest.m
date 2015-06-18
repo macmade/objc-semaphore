@@ -249,4 +249,96 @@
     [ s2 signal ];
 }
 
+- ( void )testUnnamedBinaryWaitSignal
+{
+    Semaphore * s;
+    
+    s = [ Semaphore semaphoreWithCount: 1 ];
+    
+    [ s wait ];
+    
+    XCTAssertFalse( [ s tryWait ] );
+    
+    [ s signal ];
+    
+    XCTAssertTrue( [ s tryWait ] );
+    
+    [ s signal ];
+}
+
+- ( void )testUnnamedWaitSignal
+{
+    Semaphore * s;
+    
+    s = [ Semaphore semaphoreWithCount: 2 ];
+    
+    [ s wait ];
+    [ s wait ];
+    
+    XCTAssertFalse( [ s tryWait ] );
+    
+    [ s signal ];
+    [ s signal ];
+    [ s wait ];
+    
+    XCTAssertTrue( [ s tryWait ] );
+    
+    [ s signal ];
+    [ s signal ];
+}
+
+- ( void )testNnamedBinaryWaitSignal
+{
+    Semaphore * s1;
+    Semaphore * s2;
+    
+    s1 = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore.1" count: 1 ];
+    s2 = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore.1" count: 1 ];
+    
+    [ s1 wait ];
+    
+    XCTAssertFalse( [ s1 tryWait ] );
+    XCTAssertFalse( [ s2 tryWait ] );
+    
+    [ s1 signal ];
+    
+    XCTAssertTrue(  [ s1 tryWait ] );
+    XCTAssertFalse( [ s2 tryWait ] );
+    
+    [ s2 signal ];
+    
+    XCTAssertTrue(  [ s2 tryWait ] );
+    XCTAssertFalse( [ s1 tryWait ] );
+    
+    [ s1 signal ];
+}
+
+- ( void )testNamedBinaryWaitSignal
+{
+    Semaphore * s1;
+    Semaphore * s2;
+    
+    s1 = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore.2" count: 2 ];
+    s2 = [ Semaphore semaphoreWithName: @"org.xs-labs.semaphore.2" count: 2 ];
+    
+    [ s1 wait ];
+    [ s1 wait ];
+    
+    XCTAssertFalse( [ s1 tryWait ] );
+    XCTAssertFalse( [ s2 tryWait ] );
+    
+    [ s1 signal ];
+    
+    XCTAssertTrue(  [ s1 tryWait ] );
+    XCTAssertFalse( [ s2 tryWait ] );
+    
+    [ s2 signal ];
+    
+    XCTAssertTrue(  [ s2 tryWait ] );
+    XCTAssertFalse( [ s1 tryWait ] );
+    
+    [ s1 signal ];
+    [ s1 signal ];
+}
+
 @end
